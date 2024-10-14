@@ -1,5 +1,5 @@
 import { IClient } from "../models/IClient";
-import { IClientRepository } from "../interfaces/clientRepository";
+import { IClientRepository } from "../repositories/clientRepository";
 
 export class MongoRepository implements IClientRepository {
   create(client: IClient): IClient {
@@ -10,8 +10,9 @@ export class MongoRepository implements IClientRepository {
     return client;
   }
 
-  findById(id: string): void {
+  findById(id: string, client: IClient): IClient {
     console.log(`Buscando cliente por el id ${id}`);
+    return client;
   }
 
   update(id: string, client: IClient): IClient {
