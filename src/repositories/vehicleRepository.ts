@@ -1,8 +1,8 @@
 import { IVehicle } from "../models/IVehicle";
 
 export interface IVehicleRepository {
-  create(vehicle: IVehicle): Promise<IVehicle>;
-  findById(id: string): Promise<IVehicle | null>;
-  update(id: string, vehicle: IVehicle): Promise<IVehicle>;
-  delete(id: string): Promise<void>;
+  create(vehicle: IVehicle): IVehicle;
+  findById(id: string, vehicle: IVehicle): IVehicle | null;
+  update(id: string, vehicle: IVehicle): IVehicle;
+  delete(id: string): void;
 }
